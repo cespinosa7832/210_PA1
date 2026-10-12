@@ -33,11 +33,12 @@ int main() {
     std::unique_ptr<List<Player>> game2 = makeList<Player>();
     game2->addFront(new Player(7, "Bill"));
     game2->addFront(new Player(29, "Shane"));
-    game2->addAnywhere(1, new Player(12, "Linda"));
+    game2->addAnywhere(2, new Player(12, "Linda"));
     game1->addFront(new Player(1, "Bob"));
     game1->addFront(new Player(2, "Sierra"));
     game1->addFront(new Player(3, "Selena"));
     game1->print();
+    game1->deleteAnywhere(2);
     game1->addAnywhere(2, new Player(4, "Jorge"));
     game1->print();
     game1->reverse();

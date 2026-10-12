@@ -39,6 +39,9 @@ public:
             std::cout << "ArrayList is full." << std::endl;
             return;
         }
+        if (position > size_ || position < 0) {
+            std::cout << "Out of Bounds" << std::endl;
+        }
         for (int i = size_; i > position; --i) {
             data_[i] = data_[i - 1];
         }
@@ -50,6 +53,9 @@ public:
         if (size_ == 0) {
             std::cout << "ArrayList is empty." << std::endl;
             return;
+        }
+        if (position < 0 || position >= size_) {
+            std::cout << "Out of Bounds" << std::endl;
         }
         delete data_[position];
         for (int i = position; i < size_ - 1; ++i) {
